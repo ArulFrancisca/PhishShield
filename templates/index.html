@@ -14,7 +14,7 @@
             <div class="row align-items-center justify-content-center justify-content-md-start" id="logo-row"> <!-- Add a row to align items vertically -->
                 <div class="col-auto p-0"> <!-- Use a column to contain the logo -->
                     <a class="navbar-brand m-0" href="#" >
-                        <img src="/static/logo.svg" alt="Logo" width="64" height="64" class="d-inline-block align-text-top" />
+                        <img src="{{ url_for('static', filename='logo.svg') }}" alt="Logo" width="64" height="64" class="d-inline-block align-text-top" />
                     </a>
                 </div>
                 <div class="col-auto p-0"> <!-- Use another column to contain the text -->
@@ -26,7 +26,7 @@
         </div>
     </nav>
     <div class="form-container">
-        <form id="urlForm" action="/detect" method="post">
+        <form id="urlForm" action="{{ url_for('detect') }}" method="post">
             <div class="input-group mb-3">
                 <input type="url" class="form-control" id="basic-url" name="url" aria-describedby="basic-addon3" placeholder="Enter the URL to Check" required />
             </div>
